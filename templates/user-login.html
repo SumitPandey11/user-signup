@@ -1,0 +1,30 @@
+{% extends "base.html" %}
+
+{% block content %}
+
+        <h1>User Login</h1>
+        <form action="/validate-form" method='POST'>
+            <label>User name : 
+                <input name="username" type="text" value='{{username}}'/>
+                <strong class="error">{{username_error}}</strong>
+            </label>
+            <p></p>
+            <label>Password : 
+                <input name="password" type="text" value='{{password}}' />
+                <strong class="error">{{password_error}}</strong>
+            </label>
+            <p></p>
+            <label>Password confirmation : 
+                <input name="passwordconfirmation" type="text" value='{{passwordconfirmation}}' />
+                <strong class="error">{{passwordconfirmation_error}}</strong>
+            </label>
+            <p></p>
+            <label>email : 
+                <input name="email" type="text" value='{{email}}' />
+                <strong class="error">{{email_error}}</strong>
+            </label>
+            <p></p>
+            <input type="submit" value="login" />
+        </form>
+
+{% endblock %}
